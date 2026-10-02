@@ -1,0 +1,14 @@
+// Reserve discrete bands so different overlay types never collide. Avoid
+// inventing arbitrary z-index values in components — pick the closest band.
+
+:root {
+  --z-base: 0;
+  --z-docked: 10; // sticky page chrome inside flow
+  --z-dropdown: 1000;
+  --z-sticky: 1100; // sticky headers above docked
+  --z-overlay: 1200; // modal backdrops
+  --z-modal: 1300;
+  --z-popover: 1400;
+  --z-toast: 1500;
+  --z-tooltip: 1600;
+}

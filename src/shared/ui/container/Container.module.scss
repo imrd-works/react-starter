@@ -1,0 +1,20 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  @include fluid(padding-inline, var(--spacing-m), var(--spacing-2xl));
+
+  width: 100%;
+  margin-inline: auto;
+}
+
+.narrow {
+  max-width: 32rem;
+}
+
+.default {
+  max-width: 72rem;
+}
+
+.wide {
+  max-width: 90rem;
+}

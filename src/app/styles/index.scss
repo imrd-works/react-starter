@@ -1,0 +1,11 @@
+// Global styles. Order matters:
+//   1. tokens  — CSS custom properties on :root
+//   2. reset   — opinionated normalize
+//   3. globals — element defaults that depend on tokens
+// Component styles live next to components in *.module.scss.
+
+@use 'shared/styles/tokens';
+@use 'shared/styles/base/breakpoints';
+@use 'shared/styles/base/reset';
+@use 'shared/styles/base/animations';
+@use 'shared/styles/base/globals';

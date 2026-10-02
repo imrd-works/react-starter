@@ -1,0 +1,14 @@
+{
+  "seo": {
+    "title": "Home",
+    "description": "Production-ready React starter with strict architecture and quality gates."
+  },
+  "title": "React Starter",
+  "lead": "React 19, Vite, TypeScript, Feature-Sliced Design and strict checks on every step.",
+  "toastSuccess": "Everything works!",
+  "actions": {
+    "toast": "Show toast",
+    "apiError": "Trigger API error",
+    "uiKit": "Open UI kit"
+  }
+}

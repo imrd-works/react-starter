@@ -1,0 +1,23 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "stylelint.validate": ["css", "scss"],
+  "css.validate": false,
+  "scss.validate": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "files.associations": { "*.module.scss.d.ts": "typescript" },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.module.scss": "${capture}.module.scss.d.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.module.scss"
+  },
+  "i18n-ally.localesPaths": ["src/shared/locales"],
+  "i18n-ally.keystyle": "nested"
+}

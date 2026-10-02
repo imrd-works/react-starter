@@ -1,0 +1,91 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  width: calc(100% - 2 * var(--spacing-m));
+  max-height: calc(100dvh - 2 * var(--spacing-2xl));
+  padding: 0;
+
+  /* The global reset zeroes margins; <dialog> is centered by `margin: auto`. */
+  margin: auto;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+
+  &::backdrop {
+    background-color: var(--color-bg-overlay);
+  }
+
+  &[open] {
+    animation: modal-in 150ms ease;
+  }
+}
+
+.sizeS {
+  max-width: 400px;
+}
+
+.sizeM {
+  max-width: 520px;
+}
+
+.sizeL {
+  max-width: 720px;
+}
+
+.panel {
+  @include stack(0);
+}
+
+.header {
+  @include flex(flex-start, space-between, null, var(--spacing-s));
+
+  padding: var(--spacing-l) var(--spacing-l) var(--spacing-m);
+}
+
+.title {
+  @include text('heading-s');
+
+  margin: 0;
+}
+
+.close {
+  @include reset-button;
+  @include inline-flex(center, center);
+  @include square(32px);
+
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-m);
+
+  &:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-action-secondary-bg-hover);
+  }
+
+  svg {
+    @include square(16px);
+  }
+}
+
+.body {
+  @include text('body-m');
+
+  padding: 0 var(--spacing-l) var(--spacing-l);
+  overflow: auto;
+  color: var(--color-text-secondary);
+}
+
+.footer {
+  @include flex(center, flex-end, null, var(--spacing-xs));
+
+  padding: var(--spacing-m) var(--spacing-l);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}

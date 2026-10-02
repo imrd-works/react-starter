@@ -1,0 +1,8 @@
+// Order matters: primitives are imported first (palette), semantic layers
+// after them (they reference primitives). Categories that only have a single
+// tier (spacing, radius, elevation, motion, z-index) can sit anywhere.
+@forward 'colors';
+@forward 'typography';
+@forward 'spacing';
+@forward 'radius';
+@forward 'z-index';

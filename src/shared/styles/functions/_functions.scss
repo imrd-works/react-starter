@@ -1,0 +1,15 @@
+// Keep this file lean — only utilities that pay rent. Color manipulation
+// belongs in tokens (palette layer), not in helper functions.
+
+@use 'sass:math';
+
+// Drop the unit from a length: strip-unit(16px) -> 16.
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Convert pixels to rem assuming a 16px root: rem(24) -> 1.5rem.
+// Useful when a designer hands you px values that should track root font size.
+@function rem($px, $base: 16) {
+  @return math.div(strip-unit($px), $base) * 1rem;
+}

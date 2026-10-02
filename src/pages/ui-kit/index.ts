@@ -1,0 +1,1 @@
+export { uiKitRoute } from './route'

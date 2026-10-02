@@ -1,0 +1,116 @@
+{
+  "openapi": "3.1.0",
+  "info": { "title": "React Starter API", "version": "1.0.0" },
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "operationId": "login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/LoginRequest" } }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Authenticated",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/LoginResponse" } }
+            }
+          },
+          "401": {
+            "description": "Invalid credentials",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/ApiError" } }
+            }
+          }
+        }
+      }
+    },
+    "/user/me": {
+      "get": {
+        "operationId": "getCurrentUser",
+        "responses": {
+          "200": {
+            "description": "Current user",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/User" } }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/ApiError" } }
+            }
+          }
+        }
+      }
+    },
+    "/contacts": {
+      "post": {
+        "operationId": "sendContactMessage",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/ContactRequest" } }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Message accepted",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/ContactResponse" } }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "required": ["id", "email", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["email", "password"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "password": { "type": "string" }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "required": ["token", "user"],
+        "properties": {
+          "token": { "type": "string" },
+          "user": { "$ref": "#/components/schemas/User" }
+        }
+      },
+      "ContactRequest": {
+        "type": "object",
+        "required": ["email", "message"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "message": { "type": "string" }
+        }
+      },
+      "ContactResponse": {
+        "type": "object",
+        "required": ["id"],
+        "properties": { "id": { "type": "string" } }
+      },
+      "ApiError": {
+        "type": "object",
+        "required": ["message"],
+        "properties": { "message": { "type": "string" } }
+      }
+    }
+  }
+}

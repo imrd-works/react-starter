@@ -1,0 +1,21 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  @include inline-flex(center, null, var(--spacing-xs));
+}
+
+.avatar {
+  @include circle(32px);
+  @include inline-flex(center, center);
+  @include text('label-m');
+
+  color: var(--color-action-primary-fg);
+  background-color: var(--color-action-primary-bg);
+}
+
+.name {
+  @include text('label-l');
+  @include truncate;
+
+  max-width: 12rem;
+}

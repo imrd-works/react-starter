@@ -1,0 +1,45 @@
+:root {
+  --color-bg-canvas: var(--color-white);
+  --color-bg-surface: var(--color-white);
+  --color-bg-surface-muted: var(--color-slate-50);
+  --color-bg-surface-sunken: var(--color-slate-50);
+  --color-bg-overlay: rgb(15 23 42 / 48%);
+  --color-text-primary: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-700);
+  --color-text-tertiary: var(--color-slate-500);
+  --color-text-muted: var(--color-slate-500);
+  --color-text-disabled: var(--color-slate-500);
+  --color-text-inverse: var(--color-white);
+  --color-text-link: var(--color-blue-600);
+  --color-text-link-hover: var(--color-blue-700);
+  --color-text-success: var(--color-green-700);
+  --color-text-warning: var(--color-amber-700);
+  --color-text-danger: var(--color-red-600);
+  --color-text-info: var(--color-blue-600);
+  --color-border-subtle: var(--color-slate-200);
+  --color-border-default: var(--color-slate-200);
+  --color-border-focus: var(--color-blue-600);
+  --color-border-danger: var(--color-red-600);
+  --color-action-primary-bg: var(--color-blue-600);
+  --color-action-primary-bg-hover: var(--color-blue-700);
+  --color-action-primary-bg-active: var(--color-blue-700);
+  --color-action-primary-bg-disabled: var(--color-slate-100);
+  --color-action-primary-fg: var(--color-white);
+  --color-action-primary-fg-disabled: var(--color-slate-500);
+  --color-action-secondary-bg: var(--color-slate-50);
+  --color-action-secondary-bg-hover: var(--color-slate-100);
+  --color-action-secondary-bg-active: var(--color-slate-200);
+  --color-action-secondary-border: var(--color-slate-200);
+  --color-action-secondary-fg: var(--color-slate-900);
+  --color-action-secondary-fg-disabled: var(--color-slate-500);
+  --color-danger: var(--color-red-600);
+
+  // Backward-compatible starter aliases used by demo pages/components.
+  --color-bg: var(--color-bg-surface);
+  --color-bg-alt: var(--color-bg-surface-muted);
+  --color-text: var(--color-text-primary);
+  --color-border: var(--color-border-default);
+  --color-primary: var(--color-action-primary-bg);
+  --color-primary-dark: var(--color-action-primary-bg-hover);
+  --color-error: var(--color-danger);
+}

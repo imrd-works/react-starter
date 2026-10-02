@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "vitest.explorer",
+    "ms-playwright.playwright",
+    "lokalise.i18n-ally"
+  ]
+}

@@ -1,0 +1,28 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  @include fluid(padding-block, var(--spacing-2xl), var(--spacing-5xl));
+}
+
+.title {
+  @include text('heading-l');
+
+  margin: 0;
+}
+
+.lead {
+  @include text('body-l');
+
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.section {
+  @include text('heading-s');
+
+  margin: 0;
+}
+
+.form {
+  max-width: 28rem;
+}

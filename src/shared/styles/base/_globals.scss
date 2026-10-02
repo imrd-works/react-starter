@@ -1,0 +1,42 @@
+@use '../mixins' as t;
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-canvas);
+
+  @include t.text('body-m');
+}
+
+// Show a focus ring only for keyboard navigation; mouse clicks don't trigger
+// :focus-visible in modern browsers.
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-text-link-hover);
+    text-decoration: underline;
+  }
+}
+
+::selection {
+  color: var(--color-action-primary-fg);
+  background-color: var(--color-action-primary-bg);
+}
+
+// Respect "Reduce motion" — disable transitions and animations globally.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

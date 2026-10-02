@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary
+package-lock.json -diff linguist-generated
+src/shared/api/contracts.d.ts linguist-generated
+src/**/*.module.scss.d.ts linguist-generated

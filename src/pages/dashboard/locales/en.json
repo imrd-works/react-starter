@@ -1,0 +1,6 @@
+{
+  "seo": { "title": "Dashboard" },
+  "title": "Dashboard",
+  "greeting": "Welcome back, {{name}}!",
+  "error": "Could not load your profile."
+}

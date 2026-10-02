@@ -1,0 +1,7 @@
+{
+  "email": "Your email",
+  "message": "Message",
+  "messageHint": "Up to {{max}} characters",
+  "submit": "Send message",
+  "success": "Message sent. We will get back to you soon."
+}

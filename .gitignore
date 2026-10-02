@@ -1,0 +1,32 @@
+# Dependencies
+node_modules
+
+# Build & reports
+dist
+dist-ssr
+coverage
+playwright-report
+test-results
+blob-report
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Env: commit only .env.example
+.env
+.env.*
+!.env.example
+!.env.development
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors & OS
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.sw?

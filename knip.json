@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["scripts/*.mjs"],
+  "project": ["src/**/*.{ts,tsx}", "scripts/**/*.mjs", "e2e/**/*.ts"],
+  "ignore": ["src/**/*.module.scss.d.ts", "src/shared/api/contracts.d.ts"],
+  "ignoreExportsUsedInFile": true,
+  "rules": {
+    "types": "error",
+    "exports": "error",
+    "duplicates": "error"
+  },
+  "ignoreDependencies": ["@secretlint/secretlint-rule-preset-recommend"]
+}

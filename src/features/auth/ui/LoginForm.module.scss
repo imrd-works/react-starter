@@ -1,0 +1,12 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  width: 100%;
+}
+
+.error {
+  @include text('body-s');
+
+  margin: 0;
+  color: var(--color-text-danger);
+}

@@ -1,0 +1,9 @@
+{
+  "navLabel": "Main navigation",
+  "nav": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "dashboard": "Dashboard",
+    "login": "Log in"
+  }
+}

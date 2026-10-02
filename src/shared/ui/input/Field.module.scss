@@ -1,0 +1,61 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  @include stack(var(--spacing-2xs));
+}
+
+.label {
+  @include text('label-m');
+
+  color: var(--color-text-secondary);
+}
+
+.control {
+  @include text('body-m');
+
+  width: 100%;
+  padding: var(--spacing-xs) var(--spacing-m);
+  color: var(--color-text-primary);
+  outline: none;
+  background-color: var(--color-bg-surface-sunken);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-l);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+
+  &::placeholder {
+    color: var(--color-text-tertiary);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-border-focus) 20%, transparent);
+  }
+
+  &[aria-invalid='true'] {
+    border-color: var(--color-border-danger);
+  }
+
+  @include disabled;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hint,
+.error {
+  @include text('caption');
+
+  margin: 0;
+}
+
+.hint {
+  color: var(--color-text-tertiary);
+}
+
+.error {
+  color: var(--color-text-danger);
+}

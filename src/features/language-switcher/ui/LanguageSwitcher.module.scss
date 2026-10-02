@@ -1,0 +1,19 @@
+@use 'shared/styles/mixins' as *;
+
+.root {
+  display: inline-flex;
+}
+
+.label {
+  @include visually-hidden;
+}
+
+.select {
+  @include text('label-m');
+
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-m);
+}

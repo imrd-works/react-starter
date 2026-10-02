@@ -1,0 +1,14 @@
+{
+  "seo": {
+    "title": "Главная",
+    "description": "Production-ready стартер на React со строгой архитектурой и проверками качества."
+  },
+  "title": "React Starter",
+  "lead": "React 19, Vite, TypeScript, Feature-Sliced Design и строгие проверки на каждом шаге.",
+  "toastSuccess": "Всё работает!",
+  "actions": {
+    "toast": "Показать тост",
+    "apiError": "Вызвать ошибку API",
+    "uiKit": "Открыть UI-кит"
+  }
+}
